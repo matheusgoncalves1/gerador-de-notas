@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pagamento.css">
+    <title>Pagamento</title>
+    <style>
+        @media print {
+            .print{
+                display: block;
+                }
+            .formulario {
+                display: none;
+                }
+            .voltar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form class="formulario">
+        <div class="titulo">
+            <h1 class="titulo-txt">Recibo de pagamento</h1>
+        </div>
+
+        <div class="campo">
+            <label class="subtitulo" for="valor1">Valor:</label>
+            <input type="number" id="valor" class="caixa" placeholder="00,00" name="valor" >
+        </div>
+
+        <div class="campo">
+            <label class="subtitulo" for="pagador1">Nome do pagador:</label>
+            <input id="nome-pagador" class="caixa" type="text">
+        </div>
+
+        <div class="campo">
+            <label class="subtitulo" for="cpf-pagador1">CPF ou CNPJ:</label>
+            <input id="cpf-pagador" class="caixa"type="text" autocomplete="off" maxlength="14">
+        </div>
+
+        <div class="campo">
+            <label class="subtitulo" for="referente1">Referente à:</label>
+            <input id="referente" class="caixa"type="text">
+        </div>
+
+        <div class="campo">
+            <label class="subtitulo" for="cidade1">Cidade:</label>
+            <input id="cidade" class="caixa"type="text">
+        </div>
+
+        <div class="campo">
+            <label class="subtitulo" for="emissor1">Nome do emissor:</label>
+            <input id="nome-emissor" class="caixa"type="text">
+        </div>
+
+        <div class="campo">
+            <label class="subtitulo" for="telefone1">Telefone (opcional):</label>
+            <input class="caixa"type="text" autocomplete="off" maxlength="14" id="telefone">
+        </div>
+
+        <div class="campo">
+            <label  class="subtitulo"for="cpf-emissor1">CPF ou CNPJ:</label>
+            <input id="cpf-emissor" class="caixa"type="text" autocomplete="off" maxlength="14">
+        </div>
+
+        <div class="campo">
+            <label class="subtitulo"for="observacao1">Obersevações:</label>
+            <input id="obs" class="caixa"type="text">
+        </div>
+
+        <div class="campo">
+            <label class="subtitulo"for="pagamento1">Forma de Pagamento:</label>
+            <select id="pagamento" class="caixa-pagamento">
+                <option value="" selected="selected">Selecione</option>
+                <option value="Pix">Pix</option>
+                <option value="Dinheiro">Dinheiro</option>
+                <option value="Ted">Ted</option>
+                <option value="Cheque">Cheque</option>
+                <option value="Cartao">Cartão Débito/Crédito</option>
+            </select>
+        </div>
+
+        <div>
+            <button class="botao" onclick="gerar()">Gerar Recibo</button>
+        </div>
+
+        <div id="data"></div>
+    </form>
+
+        <form action="index.html"><button class="voltar">VOLTAR</button></form>
+
+                    <!--Recibo de pagamento para impressão - PDF-->
+    <div class="print">
+        <h2 id="tituloprint">Recibo de Pagamento</h2>
+        <h3 id="recibo_valor">R$0,00</h3>
+        <p>Recebi(emos) de <strong id="recibo_nome"></strong> 
+            -CPF/CNPJ n° <strong id="recibo_cpfpagador"></strong>
+            ,a importância de <strong id="recibo_valorext"></strong>
+            referente à <strong id="recibo_Referente"></strong>. <br/>
+            Para maior clareza firmo(amos) o presente recibo para que produza os seus efeitos dandos plena, rasa e 
+            irrevogável quitação, pelo valor recebido. <br/>
+            Pagamento recebido por: <strong id="recibo_emissor">nome emissor</strong> - <strong id="recibo_pagamento"></strong>
+            <br/> <br/>
+
+            <div id="cidadedata">
+                <strong id="recibo_cidade">São Paulo</strong>, <strong id="recibo_data">22 de setembro de 2022</strong>
+            </div> <br/> <br/>
+
+            <div id="assinatura">
+              <div id="linha"></div>
+              <div id="recibo_assinatura_emissor">Nome do emissor</div> 
+              <div id="recibo_cpfemissor">000.000.000-00</div> 
+              <div id="recibo_telefone">(00)0000-0000</div>  
+            </div> <br/>
+
+            <strong id="recibo_obs">obs:</strong>
+        
+        </p>
+
+    </div>
+
+</body>
+    <script src="pagamento.js"></script>
+</html>

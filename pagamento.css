@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&family=Sarala:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding:  0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+body {
+    font-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid black;
+    gap: 20px;
+    width: 350px;
+    border-radius: 10px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 300px;
+}
+
+.titulo {
+    margin-top: 10px;
+}
+
+.titulo-txt {
+    font-family: 'sarala',sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: black;
+}
+
+.caixa {
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    border: 0.1px solid rgba(0, 0, 0, 0.438);
+    background-color: rgba(58, 57, 57, 0.014);
+    font-size: 15px;
+}
+
+.caixa-pagamento{
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    border: 0.1px solid rgba(0, 0, 0, 0.438);
+    background-color: rgba(58, 57, 57, 0.014);
+    text-align: center;
+    font-size: 15px;
+}
+
+.subtitulo {
+    font-family: 'sarala', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: black;
+}
+
+.botao {
+    width: 100px;
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: transparent;
+    background-color: rgb(76, 158, 224);
+}
+
+.print {
+    font: arial 18pt;
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px;
+    border: 1px solid rgb(109, 109, 109);
+    border-radius: 5px;
+    width: 700px;
+    display: none;
+}
+
+p {
+    font: arial 18pt;
+    margin-top: 20PX;
+}
+
+#tituloprint {
+    text-align: center;
+    font: familyfans;
+    color: rgb(15, 15, 15);
+}
+
+#recibo_valor {
+    margin-left: 570px;
+    font: 18pt;
+}
+
+#linha{
+    margin:0 auto;
+    width: 50%;
+    border-top: 1px solid black;
+    width: 150px;
+}
+
+#assinatura {
+    text-align: center;
+    margin-top: 20px ;
+}
+
+#cidadedata {
+    margin-left: 425px;
+}
+
+#data {
+    display: none;
+}
+
+.voltar {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100px;
+    height: 25px;
+    font-family: 'roboto',sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    background-color: rgb(76, 158, 224);
+    border: transparent;
+    border-radius: 5px;
+    color: black;
+}
+
+
+
